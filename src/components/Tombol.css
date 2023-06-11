@@ -10,4 +10,9 @@
   &:hover {
     background-color: green;
   }
+
+  &:disabled {
+    pointer-events: none;
+    background-color: gray;
+  }
 }

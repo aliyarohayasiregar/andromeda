@@ -1,5 +1,7 @@
 // import { useState } from "react";
 
+import Tombol from "./Tombol";
+
 const planets = [
   "Mercury",
   "Venus",
@@ -25,19 +27,19 @@ export default function SolarSystem({
     <>
       <h1>{planets[index]}</h1>
       {showMore && <p>Planet ke-{index + 1} dalam tata surya.</p>}
-      <button onClick={handleMoreClick}>
+      <Tombol onClick={handleMoreClick}>
         {showMore ? "Sembunyikan" : "Tampilkan"} detail
-      </button>
+      </Tombol>
       <div style={{ display: "flex" }}>
-        <button onClick={() => setIndex(index - 1)} disabled={index === 0}>
+        <Tombol onClick={() => setIndex(index - 1)} disabled={index === 0}>
           Sebelumnya
-        </button>
-        <button
+        </Tombol>
+        <Tombol
           onClick={() => setIndex(index + 1)}
           disabled={index === planets.length - 1}
         >
           Berikutnya
-        </button>
+        </Tombol>
       </div>
     </>
   );

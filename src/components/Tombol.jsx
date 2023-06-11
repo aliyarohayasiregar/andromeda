@@ -1,9 +1,9 @@
 import "./Tombol.css";
 
-function Tombol(props) {
+function Tombol({ children, ...props }) {
   return (
-    <button onClick={props.onClick} className="button">
-      {props.children}
+    <button className="button" {...props}>
+      {children}
     </button>
   );
 }
